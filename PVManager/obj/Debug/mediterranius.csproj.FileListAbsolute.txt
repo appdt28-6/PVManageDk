@@ -1,0 +1,58 @@
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.csprojResolveAssemblyReference.cache
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.login.resources
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.csproj.GenerateResource.Cache
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\bin\Debug\mediterranius.exe
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\bin\Debug\mediterranius.pdb
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.pdb
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.comandas.resources
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.Mesas.resources
+E:\mediterranius\mediterranius\bin\Debug\mediterranius.exe
+E:\mediterranius\mediterranius\bin\Debug\mediterranius.pdb
+E:\mediterranius\mediterranius\obj\Debug\ResolveAssemblyReference.cache
+E:\mediterranius\mediterranius\obj\Debug\mediterranius.comandas.resources
+E:\mediterranius\mediterranius\obj\Debug\mediterranius.login.resources
+E:\mediterranius\mediterranius\obj\Debug\mediterranius.Mesas.resources
+E:\mediterranius\mediterranius\obj\Debug\GenerateResource.read.1.tlog
+E:\mediterranius\mediterranius\obj\Debug\GenerateResource.write.1.tlog
+E:\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+E:\mediterranius\mediterranius\obj\Debug\mediterranius.pdb
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\bin\Debug\mediterranius.exe
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\bin\Debug\mediterranius.pdb
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\mediterranius.comandas.resources
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\mediterranius.login.resources
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\mediterranius.Mesas.resources
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+C:\Documents and Settings\usuario\Mis documentos\mediterranius\mediterranius\obj\Debug\mediterranius.pdb
+E:\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+E:\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.pdb
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.pdb
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\bin\Debug\mediterranius.exe
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\bin\Debug\mediterranius.pdb
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.csprojResolveAssemblyReference.cache
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.comandas.resources
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.login.resources
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.Mesas.resources
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.Vino.resources
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.csproj.GenerateResource.Cache
+C:\Users\Us\Downloads\mediterranius (1)\mediterranius\mediterranius\obj\Debug\mediterranius.cambiaProducto.resources
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.cambiaProducto.resources
+D:\Documentos\SharpDevelop Projects\mediterranius\mediterranius\obj\Debug\mediterranius.Vino.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.cambiaProducto.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.comandas.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.datosFactura.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.login.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.Mesas.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.Properties.Resources.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.Vino.resources
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Mike\Desktop\mediterranius\mediterranius\bin\Debug\mediterranius.exe
+C:\Users\Mike\Desktop\mediterranius\mediterranius\bin\Debug\mediterranius.pdb
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.exe
+C:\Users\Mike\Desktop\mediterranius\mediterranius\obj\Debug\mediterranius.pdb

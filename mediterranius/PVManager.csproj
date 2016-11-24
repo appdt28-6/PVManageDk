@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{C5FA7CEA-CEE7-443C-BC2C-5E1F11357DA7}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mediterranius</RootNamespace>
+    <AssemblyName>pvmanager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\Mike\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cambiaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cambiaProducto.Designer.cs">
+      <DependentUpon>cambiaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmdGrid.cs" />
+    <Compile Include="datosFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datosFactura.Designer.cs">
+      <DependentUpon>datosFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db.cs" />
+    <Compile Include="Factura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factura.Designer.cs">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Index.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Index.Designer.cs">
+      <DependentUpon>Index.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="printTicket.cs" />
+    <Compile Include="RegistroVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVenta.Designer.cs">
+      <DependentUpon>RegistroVenta.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="cambiaProducto.resx">
+      <DependentUpon>cambiaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datosFactura.resx">
+      <DependentUpon>datosFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factura.resx">
+      <DependentUpon>Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Index.resx">
+      <DependentUpon>Index.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroVenta.resx">
+      <DependentUpon>RegistroVenta.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Images\logo.png" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\cambiaProducto.datasource" />
+    <None Include="Properties\DataSources\cmdGrid.datasource" />
+    <None Include="Properties\DataSources\comandas.datasource" />
+    <None Include="Properties\DataSources\db.datasource" />
+    <None Include="Properties\DataSources\login.datasource" />
+    <None Include="Properties\DataSources\Mesas.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.AuthenticationPluginConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseCommandInterceptor.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseExceptionInterceptor.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.BaseTableCache.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.InterceptorConfigurationElement.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientPermission.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientPermissionAttribute.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConfiguration.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataReader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlError.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlHelper.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScript.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlSecurityPermission.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlStatementExecutedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTrace.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTransaction.datasource" />
+    <None Include="Properties\DataSources\OrderItem.datasource" />
+    <None Include="Properties\DataSources\OrderTotal.datasource" />
+    <None Include="Properties\DataSources\printTicket.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Vino.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
