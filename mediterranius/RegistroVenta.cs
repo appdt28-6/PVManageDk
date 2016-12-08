@@ -187,8 +187,19 @@ namespace mediterranius
             objindex.Show();
             this.Close();
         }
-			
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            barcode.Text = "2255";
+            buscaTarget();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            barcode.Text = "201550";
+            buscaTarget();
+        }
     }
 }
