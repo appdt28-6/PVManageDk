@@ -64,7 +64,7 @@ namespace mediterranius
         }
         void imprimefact() {
 
-           printTicket fact = new printTicket();
+           Ticket fact = new Ticket();
           	fact.AddHeaderLine("C.P Espiritu Santo");
             fact.AddHeaderLine("Calle");
             fact.AddHeaderLine("Colonia");
@@ -94,9 +94,9 @@ namespace mediterranius
                 //}
                 //reader.Close();
 
-                fact.AddTotal("Importe: ", reader[0].ToString());
-                fact.AddTotal("Iva:", reader[1].ToString());
-                fact.AddTotal("Total:", reader[2].ToString());
+               // fact.AddTotal("Importe: ", reader[0].ToString());
+                //fact.AddTotal("Iva:", reader[1].ToString());
+                //fact.AddTotal("Total:", reader[2].ToString());
             }
             reader.Close();
 

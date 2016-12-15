@@ -1,19 +1,11 @@
-﻿/*
- * Creado por SharpDevelop.
- * Usuario: Hinojosa
- * Fecha: 13/02/2013
- * Hora: 09:37 a.m.
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
- */
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Collections;
 
 namespace mediterranius
 {
-    public class printTicket
+    public class Ticket
     {
         ArrayList headerLines = new ArrayList();
         ArrayList subHeaderLines = new ArrayList();
@@ -33,18 +25,18 @@ namespace mediterranius
         float topMargin = 3;
 
         string fontName = "Lucida Console";
-        int fontSize = 8;
+        int fontSize = 9;
 
         Font printFont = null;
         SolidBrush myBrush = new SolidBrush(Color.Black);
 
         Graphics gfx = null;
 
-        string line = null; 
+        string line = null;
 
-        public printTicket()
+        public Ticket()
         {
-           
+
         }
 
         public Image HeaderImage
@@ -87,13 +79,13 @@ namespace mediterranius
             subHeaderLines.Add(line);
         }
 
-        public void AddItem(string cantidad,string item, string price)
+        public void AddItem(string cantidad, string item, string price)
         {
             OrderItem newItem = new OrderItem('?');
-            items.Add(newItem.GenerateItem(cantidad,item, price));
+            items.Add(newItem.GenerateItem(cantidad, item, price));
         }
 
-        public void AddTotal(string name,string price)
+        public void AddTotal(string name, string price)
         {
             OrderTotal newTotal = new OrderTotal('?');
             totales.Add(newTotal.GenerateTotal(name, price));
@@ -102,14 +94,14 @@ namespace mediterranius
         public void AddFooterLine(string line)
         {
             footerLines.Add(line);
-        }   
+        }
 
         private string AlignRightText(int lenght)
         {
             string espacios = "";
-            int spaces = maxChar - lenght;
-            for (int x = 0; x < spaces; x++)
-                espacios += " ";
+            // int spaces = maxChar - lenght;
+            //for (int x = 0; x < spaces; x++)
+            espacios += "";
             return espacios;
         }
 
@@ -182,7 +174,7 @@ namespace mediterranius
 
         private void DrawHeader()
         {
-            foreach(string header in headerLines)
+            foreach (string header in headerLines)
             {
                 if (header.Length > maxChar)
                 {
@@ -192,14 +184,14 @@ namespace mediterranius
                     while (headerLenght > maxChar)
                     {
                         line = header.Substring(currentChar, maxChar);
-                        gfx.DrawString(line, printFont, myBrush, leftMargin,YPosition(), new StringFormat());
+                        gfx.DrawString(line, printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
                         count++;
                         currentChar += maxChar;
                         headerLenght -= maxChar;
                     }
                     line = header;
-                    gfx.DrawString(line.Substring(currentChar, line.Length - currentChar), printFont, myBrush, leftMargin,YPosition(), new StringFormat());
+                    gfx.DrawString(line.Substring(currentChar, line.Length - currentChar), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
                     count++;
                 }
                 else
@@ -211,7 +203,7 @@ namespace mediterranius
                 }
             }
             DrawEspacio();
-        }   
+        }
 
         private void DrawSubHeader()
         {
@@ -225,7 +217,7 @@ namespace mediterranius
                     while (subHeaderLenght > maxChar)
                     {
                         line = subHeader;
-                        gfx.DrawString(line.Substring(currentChar, maxChar), printFont, myBrush, leftMargin,YPosition(), new StringFormat());
+                        gfx.DrawString(line.Substring(currentChar, maxChar), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
                         count++;
                         currentChar += maxChar;
@@ -239,7 +231,7 @@ namespace mediterranius
                 {
                     line = subHeader;
 
-                    gfx.DrawString(line, printFont, myBrush, leftMargin,YPosition(), new StringFormat());
+                    gfx.DrawString(line, printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
                     count++;
 
@@ -257,7 +249,7 @@ namespace mediterranius
         {
             OrderItem ordIt = new OrderItem('?');
 
-            gfx.DrawString("CANT  DESCRIPCION  IMPORTE", printFont, myBrush, leftMargin, YPosition(), new StringFormat());
+            gfx.DrawString("CANT    IMPORTE          DESC.", printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
             count++;
             DrawEspacio();
@@ -284,7 +276,7 @@ namespace mediterranius
                     while (itemLenght > maxCharDescription)
                     {
                         line = ordIt.GetItemName(item);
-                        gfx.DrawString("      " + line.Substring(currentChar, maxCharDescription), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
+                        gfx.DrawString("   " + line.Substring(currentChar, maxCharDescription), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
                         count++;
                         currentChar += maxCharDescription;
@@ -292,12 +284,12 @@ namespace mediterranius
                     }
 
                     line = ordIt.GetItemName(item);
-                    gfx.DrawString("      " + line.Substring(currentChar, line.Length - currentChar), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
+                    gfx.DrawString("-" + line.Substring(currentChar, line.Length - currentChar), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
                     count++;
                 }
                 else
                 {
-                    gfx.DrawString("      " + ordIt.GetItemName(item), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
+                    gfx.DrawString("   " + ordIt.GetItemName(item), printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
                     count++;
                 }
@@ -319,13 +311,13 @@ namespace mediterranius
 
             foreach (string total in totales)
             {
-                line =ordTot.GetTotalCantidad(total);
+                line = ordTot.GetTotalCantidad(total);
                 line = AlignRightText(line.Length) + line;
 
                 gfx.DrawString(line, printFont, myBrush, leftMargin, YPosition(), new StringFormat());
                 leftMargin = 0;
 
-                line = "      "+ordTot.GetTotalName(total);
+                line = "   " + ordTot.GetTotalName(total);
                 gfx.DrawString(line, printFont, myBrush, leftMargin, YPosition(), new StringFormat());
                 count++;
             }
@@ -384,18 +376,18 @@ namespace mediterranius
 
         public OrderItem(char delimit)
         {
-            delimitador = new char[] {delimit };
+            delimitador = new char[] { delimit };
         }
 
         public string GetItemCantidad(string orderItem)
         {
-            string [] delimitado = orderItem.Split(delimitador);
+            string[] delimitado = orderItem.Split(delimitador);
             return delimitado[0];
         }
 
         public string GetItemName(string orderItem)
         {
-            string [] delimitado = orderItem.Split(delimitador);
+            string[] delimitado = orderItem.Split(delimitador);
             return delimitado[1];
         }
 

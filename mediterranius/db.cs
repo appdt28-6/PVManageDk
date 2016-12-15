@@ -21,7 +21,6 @@ namespace mediterranius
 		public void connect(){
 			dbcon = new MySqlConnection( parametros );
 			dbcon.Open();
-			
 			dbcmd = dbcon.CreateCommand();			
 		}
 

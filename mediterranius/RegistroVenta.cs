@@ -41,7 +41,7 @@ namespace mediterranius
         }
         void buscaTarget()
         {
-            reader = conexion.select("Select descripcion,precio,idProducto from productos where codigoBarras ='" + barcode.Text + "' ");
+            reader = conexion.select("Select nombre,precio,idProducto from productos where codigoBarras ='" + barcode.Text + "' ");
 
             if (reader.Read())
             {
@@ -116,32 +116,88 @@ namespace mediterranius
 
         private void btnimprime_Click(object sender, EventArgs e)
         {
-            printTicket ticket = new printTicket();
+            Ticket ticket = new Ticket();
 
-            ticket.AddHeaderLine("C.P Espiritu Santo");
-            ticket.AddHeaderLine("Calle");
-            ticket.AddHeaderLine("Colonia");
-            ticket.AddHeaderLine("RFC: CSI-020226-MV4");
-            ticket.AddSubHeaderLine("Ticket: " + idTicket + " ");
-            ticket.AddSubHeaderLine(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString());
+            //ticket.HeaderImage = "C:\imagen.jpg"; //esta propiedad no es obligatoria
+
+            ticket.AddHeaderLine("Buffet Espiritu S.");
+            //ticket.AddHeaderLine("EXPEDIDO EN:");
+            //ticket.AddHeaderLine("AV. TAMAULIPAS NO. 5 LOC. 101");
+            //ticket.AddHeaderLine("MEXICO, DISTRITO FEDERAL");
+            //ticket.AddHeaderLine("RFC: CSI-020226-MV4");
+
+            //El metodo AddSubHeaderLine es lo mismo al de AddHeaderLine con la diferencia
+            //de que al final de cada linea agrega una linea punteada "=========="
+            ticket.AddHeaderLine("Ticket # "+ idTicket +" ");
+            //ticket.AddHeaderLine("Le atendió: Prueba");
+            ticket.AddHeaderLine(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString());
+
+            //El metodo AddItem requeire 3 parametros, el primero es cantidad, el segundo es la descripcion
+            //del producto y el tercero es el precio
+            //ticket.AddItem("1", "Articulo 1", "15.00");
+            //ticket.AddItem("2", "Articulo 2", "25.00");
 
             reader = conexion.select("SELECT ventasticket.cantidad,productos.descripcion, " +
-                                     "ventasticket.importe FROM     " +
-                                     "ventasticket INNER JOIN productos " +
-                                     "ON (ventasticket.idProducto = productos.idProducto) where ventasticket.idTicket=" + idTicket + ";");
+                                                 "ventasticket.importe FROM     " +
+                                                 "ventasticket INNER JOIN productos " +
+                                                 "ON (ventasticket.idProducto = productos.idProducto) where ventasticket.idTicket=" + idTicket + ";");
             while (reader.Read())
             {
-                ticket.AddItem(reader[0].ToString(), reader[1].ToString(), reader[2].ToString());
+                //ticket.AddItem(Convert.ToString(reader[0]), "Articulo",Convert.ToString(reader[2]));
+                ticket.AddItem(reader[2].ToString(), "" + reader[1] + "",reader[0].ToString());
+                ticket.AddItem("=", "", "");
             }
+
             reader.Close();
 
-            ticket.AddTotal("Total: ", lblTotal.Text);
-            ticket.AddFooterLine("GRACIAS POR SU VISITA");
-            ticket.AddFooterLine("Dios lo bendice");
+            //El metodo AddTotal requiere 2 parametros, la descripcion del total, y el precio
+            //ticket.AddTotal("SUBTOTAL", "29.75" );
+            //ticket.AddTotal("IVA", "5.25" );
+            ticket.AddTotal("TOTAL", lblTotal.Text);
+            //ticket.AddTotal("", "" ); //Ponemos un total en blanco que sirve de espacio
+            //ticket.AddTotal("RECIBIDO", "50.00" );
+            //ticket.AddTotal("CAMBIO", "15.00" );
+            //ticket.AddTotal("", "" );//Ponemos un total en blanco que sirve de espacio
+            //ticket.AddTotal("USTED AHORRO", "0.00" );
+
+            //El metodo AddFooterLine funciona igual que la cabecera
+            //ticket.AddFooterLine("EL CAFE ES NUESTRA PASION...");
+            //ticket.AddFooterLine("VIVE LA EXPERIENCIA EN STARBUCKS");
+            ticket.AddFooterLine("GRACIAS POR TU VISITA");
+
+            //Y por ultimo llamamos al metodo PrintTicket para imprimir el ticket, este metodo necesita un
+            //parametro de tipo string que debe de ser el nombre de la impresora.
+
+
+
+            //Ticket ticket = new Ticket();
+
+            //            ticket.AddHeaderLine("Buffet Espiritu Santo ");
+            //            //ticket.AddHeaderLine("Calle");
+            //            //ticket.AddHeaderLine("Colonia");
+            //            //ticket.AddHeaderLine("RFC: CSI-020226-MV4");
+            //            ticket.AddSubHeaderLine("Ticket: " + idTicket + " ");
+            //            ticket.AddSubHeaderLine(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString());
+
+
+            //            reader = conexion.select("SELECT ventasticket.cantidad,productos.nombre, " +
+            //                                     "ventasticket.importe FROM     " +
+            //                                     "ventasticket INNER JOIN productos " +
+            //                                     "ON (ventasticket.idProducto = productos.idProducto) where ventasticket.idTicket=" + idTicket + ";");
+            //            while (reader.Read())
+            //            {
+            //               ticket.AddItem(reader[0].ToString(),"", reader[2].ToString());
+            //            }
+
+            //            reader.Close();
+            //            ticket.AddSubHeaderLine("Total:" + lblTotal.Text + " ");
+            //            //ticket.AddTotal("Total:",lblTotal.Text);
+            //            ticket.AddFooterLine("GRACIAS POR SU VISITA");
+            //            //ticket.AddFooterLine("Dios lo bendice");
 
             try
             {
-                ticket.PrintTicket("local");
+                ticket.PrintTicket("Generic");
                 btnCerrar_Click(sender, e);
             }
             catch (System.Exception)
@@ -150,7 +206,7 @@ namespace mediterranius
             }
         }
 
-       
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -166,7 +222,7 @@ namespace mediterranius
                 this.Close();
                 datosFactura factura = new datosFactura(idTicket);
                 factura.Show();
-                btnimprime_Click(sender, e);
+                //btnimprime_Click(sender, e);
                 //MessageBox.Show("Facturando");
             }
             else
@@ -176,6 +232,7 @@ namespace mediterranius
                
                 Index objmesas = new Index(idEmpleado.ToString());
                 objmesas.Show();
+               // btnimprime_Click(sender, e);
                 this.Close();
             }
             
