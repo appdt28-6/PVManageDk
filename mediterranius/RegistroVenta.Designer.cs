@@ -48,6 +48,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdult = new System.Windows.Forms.Button();
+            this.btnllevar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -174,6 +175,7 @@
             this.btnCerrar.TabIndex = 12;
             this.btnCerrar.Text = "Terminar";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Visible = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label4
@@ -208,12 +210,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnllevar);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.btnAdult);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.Location = new System.Drawing.Point(371, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(211, 84);
+            this.groupBox1.Size = new System.Drawing.Size(310, 84);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acceso Rapido";
@@ -239,6 +242,17 @@
             this.btnAdult.Text = "B. Adulto";
             this.btnAdult.UseVisualStyleBackColor = true;
             this.btnAdult.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnllevar
+            // 
+            this.btnllevar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnllevar.Location = new System.Drawing.Point(206, 23);
+            this.btnllevar.Name = "btnllevar";
+            this.btnllevar.Size = new System.Drawing.Size(75, 50);
+            this.btnllevar.TabIndex = 2;
+            this.btnllevar.Text = "Llevar";
+            this.btnllevar.UseVisualStyleBackColor = true;
+            this.btnllevar.Click += new System.EventHandler(this.btnllevar_Click);
             // 
             // RegistroVenta
             // 
@@ -297,5 +311,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAdult;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnllevar;
     }
 }

@@ -250,6 +250,9 @@ namespace mediterranius
            
             barcode.Text = "2255";
             buscaTarget();
+            agregaAventa(txtid.Text, txtprecio.Text, "1");
+            gridVenta.DataSource = lee.fillTickets(idTicket.ToString());
+            calculaTotal();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -257,6 +260,18 @@ namespace mediterranius
            
             barcode.Text = "201550";
             buscaTarget();
+            agregaAventa(txtid.Text, txtprecio.Text, "1");
+            gridVenta.DataSource = lee.fillTickets(idTicket.ToString());
+            calculaTotal();
+        }
+
+        private void btnllevar_Click(object sender, EventArgs e)
+        {
+            barcode.Text = "2257";
+            buscaTarget();
+            agregaAventa(txtid.Text, txtprecio.Text, "1");
+            gridVenta.DataSource = lee.fillTickets(idTicket.ToString());
+            calculaTotal();
         }
     }
 }
