@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Images\favicon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="pvmanager" version="1.0.6199.40397" publicKeyToken="A2C03518738E2554" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="pvmanager" version="1.0.6204.39738" publicKeyToken="A2C03518738E2554" language="neutral" processorArchitecture="msil" />
     <commandLine file="pvmanager.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -56,13 +56,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pvmanager.exe" size="168976">
-      <assemblyIdentity name="pvmanager" version="1.0.6199.40397" publicKeyToken="A2C03518738E2554" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="pvmanager" version="1.0.6204.39738" publicKeyToken="A2C03518738E2554" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xu0HeAIPSrvK7N7q2FFjUw6erT+nRKzpU3tIxvt6kFU=</dsig:DigestValue>
+        <dsig:DigestValue>add6BbaJuOgPSCAL8Oqf6OePRsYpMfa4IPnsjUlzoLI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

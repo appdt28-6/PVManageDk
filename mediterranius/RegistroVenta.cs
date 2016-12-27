@@ -63,7 +63,7 @@ namespace mediterranius
         {
             try
             {
-                conexion.insert("INSERT INTO ventasTicket set " +
+                conexion.insert("INSERT INTO ventasticket set " +
                             "idProducto=" + idProducto +
                             ",cantidad= " + cant +
                             ",presioUnitario=" + presio +
@@ -129,6 +129,7 @@ namespace mediterranius
             //El metodo AddSubHeaderLine es lo mismo al de AddHeaderLine con la diferencia
             //de que al final de cada linea agrega una linea punteada "=========="
             ticket.AddHeaderLine("Ticket # "+ idTicket +" ");
+            ticket.AddHeaderLine("\n");
             //ticket.AddHeaderLine("Le atendió: Prueba");
             ticket.AddHeaderLine(DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString());
 
@@ -136,6 +137,12 @@ namespace mediterranius
             //del producto y el tercero es el precio
             //ticket.AddItem("1", "Articulo 1", "15.00");
             //ticket.AddItem("2", "Articulo 2", "25.00");
+            ticket.AddHeaderLine("\n");
+            ticket.AddHeaderLine("----------------------");
+            ticket.AddHeaderLine("\n");
+            ticket.AddHeaderLine("Cant.     Desc.     Importe");
+            ticket.AddHeaderLine("\n");
+            //ticket.AddHeaderLine("Articulo 2");
 
             reader = conexion.select("SELECT ventasticket.cantidad,productos.descripcion, " +
                                                  "ventasticket.importe FROM     " +
@@ -144,16 +151,19 @@ namespace mediterranius
             while (reader.Read())
             {
                 //ticket.AddItem(Convert.ToString(reader[0]), "Articulo",Convert.ToString(reader[2]));
-                ticket.AddItem(reader[2].ToString(), "" + reader[1] + "",reader[0].ToString());
-                ticket.AddItem("=", "", "");
+                ticket.AddHeaderLine(" "+reader[0].ToString()+"      " + reader[1] +"      $"+reader[2].ToString());
+                ticket.AddHeaderLine("\n");
             }
 
             reader.Close();
-
+            ticket.AddHeaderLine("\n");
+            ticket.AddHeaderLine("----------------------");
+            ticket.AddHeaderLine("\n");
+            ticket.AddHeaderLine("TOTAL: $" +lblTotal.Text);
             //El metodo AddTotal requiere 2 parametros, la descripcion del total, y el precio
             //ticket.AddTotal("SUBTOTAL", "29.75" );
             //ticket.AddTotal("IVA", "5.25" );
-            ticket.AddTotal("TOTAL", lblTotal.Text);
+            //ticket.AddTotal("TOTAL", lblTotal.Text);
             //ticket.AddTotal("", "" ); //Ponemos un total en blanco que sirve de espacio
             //ticket.AddTotal("RECIBIDO", "50.00" );
             //ticket.AddTotal("CAMBIO", "15.00" );

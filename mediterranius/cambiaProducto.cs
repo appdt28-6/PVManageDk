@@ -22,7 +22,7 @@ namespace mediterranius
             idTicket = _idTicket;
             idProducto = _idProducto;
             reader = conexion.select("SELECT productos.descripcion,ventasticket.cantidad FROM productos INNER JOIN "+ 
-            "ventasticket ON (productos.idProducto = ventasTicket.idProducto) WHERE  "+
+            "ventasticket ON (productos.idProducto = ventasticket.idProducto) WHERE  "+
             "ventasticket.idTicket = "+_idTicket+" AND  "+
             "ventasticket.idProducto = "+_idProducto+";");
             if (reader.Read()) {
@@ -36,7 +36,7 @@ namespace mediterranius
         {
             try
             {
-                conexion.insert("DELETE FROM ventasTicket WHERE  idTicket = " + idTicket + " AND  idProducto = " + idProducto + ";");
+                conexion.insert("DELETE FROM ventasticket WHERE  idTicket = " + idTicket + " AND  idProducto = " + idProducto + ";");
                 this.Close();
             }catch(System.Exception){
                 lblError.Visible = true;
@@ -65,7 +65,7 @@ namespace mediterranius
         private void cambiaCantidad() {
             try
             {
-                conexion.insert("UPDATE ventasTicket SET cantidad = " + txtCantidad.Text + ",importe=presioUnitario*" + txtCantidad.Text +
+                conexion.insert("UPDATE ventasticket SET cantidad = " + txtCantidad.Text + ",importe=presioUnitario*" + txtCantidad.Text +
                     " WHERE  idTicket = " + idTicket + " AND  idProducto = " + idProducto + ";");
                 this.Close();
             }

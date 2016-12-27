@@ -249,7 +249,7 @@ namespace mediterranius
         {
             OrderItem ordIt = new OrderItem('?');
 
-            gfx.DrawString("CANT    IMPORTE          DESC.", printFont, myBrush, leftMargin, YPosition(), new StringFormat());
+            //gfx.DrawString("CANT    IMPORTE          DESC.", printFont, myBrush, leftMargin, YPosition(), new StringFormat());
 
             count++;
             DrawEspacio();
