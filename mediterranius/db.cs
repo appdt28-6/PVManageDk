@@ -14,12 +14,21 @@ namespace mediterranius
           "Password=@ppdt;" +
           "Pooling=false";
 
+        //private string parametrosw =
+        //  "Server=sql10.freemysqlhosting.net;" +
+        //  "Database=sql10151059;" +
+        //  "User ID=sql10151059;" +
+        //  "Password=CZpI3qx4vN;" +
+        //  "Pooling=false";
+
         private string parametrosw =
-          "Server=sql10.freemysqlhosting.net;" +
-          "Database=sql10151059;" +
-          "User ID=sql10151059;" +
-          "Password=CZpI3qx4vN;" +
+          "Server=mysql5006.smarterasp.net;" +
+          "Database=db_a09b1f_pv;" +
+          "User ID=a09b1f_pv;" +
+          "Password=@ppDT2016.;" +
           "Pooling=false";
+
+
 
         private IDbConnection dbcon;
 		
@@ -44,7 +53,7 @@ namespace mediterranius
             //}
 
             ///anterior
-            dbcon = new MySqlConnection(parametros);
+            dbcon = new MySqlConnection(parametrosw);
             dbcon.Open();
             dbcmd = dbcon.CreateCommand();
         }
