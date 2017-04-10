@@ -53,7 +53,7 @@ namespace mediterranius
             //}
 
             ///anterior
-            dbcon = new MySqlConnection(parametrosw);
+            dbcon = new MySqlConnection(parametros);
             dbcon.Open();
             dbcmd = dbcon.CreateCommand();
         }

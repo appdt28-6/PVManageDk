@@ -159,7 +159,11 @@ namespace mediterranius
             ticket.AddHeaderLine("\n");
             ticket.AddHeaderLine("----------------------");
             ticket.AddHeaderLine("\n");
-            ticket.AddHeaderLine("TOTAL: $" +lblTotal.Text);
+            ticket.AddHeaderLine("SUBTOTAL: $" +lblTotal.Text);
+            int subtotal = Convert.ToInt32(lblTotal.Text);
+            double iva=subtotal*.16;
+            ticket.AddHeaderLine("IVA: $" + iva);
+            ticket.AddHeaderLine("Total: $" +(subtotal+iva));
             //El metodo AddTotal requiere 2 parametros, la descripcion del total, y el precio
             //ticket.AddTotal("SUBTOTAL", "29.75" );
             //ticket.AddTotal("IVA", "5.25" );
@@ -212,6 +216,7 @@ namespace mediterranius
             }
             catch (System.Exception)
             {
+                btnCerrar_Click(sender, e);
                 MessageBox.Show("No se encontro la impresora");
             }
         }

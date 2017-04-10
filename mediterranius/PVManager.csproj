@@ -81,7 +81,8 @@
     <ApplicationIcon>Images\favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>PVManager_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
@@ -225,7 +226,6 @@
     <None Include="Properties\DataSources\printTicket.datasource" />
     <None Include="Properties\DataSources\Program.datasource" />
     <None Include="Properties\DataSources\Vino.datasource" />
-    <None Include="PVManager_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\favicon.ico" />
