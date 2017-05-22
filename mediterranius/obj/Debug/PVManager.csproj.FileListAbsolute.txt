@@ -57,3 +57,4 @@ C:\Users\Miguel Mendez\Documents\Visual Studio 2015\AppDT\PVManageDk\trunk\medit
 C:\Users\Miguel Mendez\Documents\Visual Studio 2015\AppDT\PVManageDk\trunk\mediterranius\bin\Debug\MySql.Data.dll
 C:\Users\Miguel Mendez\Documents\Visual Studio 2015\AppDT\PVManageDk\trunk\mediterranius\obj\Debug\pvmanager.exe.manifest
 C:\Users\Miguel Mendez\Documents\Visual Studio 2015\AppDT\PVManageDk\trunk\mediterranius\obj\Debug\pvmanager.application
+C:\Users\Miguel Mendez\Documents\Visual Studio 2015\AppDT\PVManageDk\trunk\mediterranius\obj\Debug\PVManager.csprojResolveAssemblyReference.cache

@@ -122,8 +122,8 @@ namespace mediterranius
 
             ticket.AddHeaderLine("Buffet Espiritu S.");
             //ticket.AddHeaderLine("EXPEDIDO EN:");
-            //ticket.AddHeaderLine("AV. TAMAULIPAS NO. 5 LOC. 101");
-            //ticket.AddHeaderLine("MEXICO, DISTRITO FEDERAL");
+            ticket.AddHeaderLine("BLVD. SANTA CATARINA");
+            ticket.AddHeaderLine("MONSERRAT #110, FRACC. LA HERRADURA");
             //ticket.AddHeaderLine("RFC: CSI-020226-MV4");
 
             //El metodo AddSubHeaderLine es lo mismo al de AddHeaderLine con la diferencia
